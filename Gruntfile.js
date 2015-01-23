@@ -22,7 +22,7 @@ module.exports = function (grunt) {
         secretAccessKey: process.env.AWS_SECRET_KEY_DEV,
         access: 'public-read',
         region: 'eu-west-1',
-        uploadConcurrency: 50,
+        uploadConcurrency: 20,
         progress: 'progressBar'
       },
       sync: {
