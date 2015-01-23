@@ -11,9 +11,11 @@ Set some AWS access key's in your local shell environment.
 You're advised to use IAM users and allow the following actions, `s3:GetObject`, `s3:GetObjectAcl`, `s3:ListBucket`, `s3:PutObject`, and `s3:PutObjectAcl`.
 Note also that with the `s3:ListBucket` action you may have to specify the bucket and all things under the bucket as resources.
 
+If you need it [grunt-aws-s3](https://github.com/MathieuLoutre/grunt-aws-s3) contains a whole lota extra detail on the config options used.
+
 ## Installation
 
-You will need Node.js and NPM, and then just need to run the following command.
+You will need [Node.js](http://nodejs.org/) and NPM (which is bundled with Node.js), and then just need to run the following command.
 
 ```
 npm install
