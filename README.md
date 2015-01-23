@@ -35,6 +35,6 @@ Where:
 * **`<bucket-name>`** -- The bucket to upload to.
 * **`<prefix>`** -- The 'folder' in the bucket to put the files in. (not strictly a folder but will be prepended to the file's key when uploaded and will act as if it were a folder. in most situations)
 
-You may need to update Gruntfile.js with your specific region and desired concurrency.
+You may need to update Gruntfile.js with your specific region and desired concurrency. I may make that configurable in a future iteration.
 
 
