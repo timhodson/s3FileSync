@@ -1,0 +1,17 @@
+{
+  "name": "s3FileSync",
+  "version": "0.1.0",
+  "description": "A grunt tool for syncing S3 files",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "load-grunt-tasks": "~0.2.0",
+    "time-grunt": "~0.2.1",
+    "grunt-aws-s3": "~0.11.0"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "repository": "https://github.com/timhodson/s3FileSync"
+}
+

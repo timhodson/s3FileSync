@@ -1,0 +1,32 @@
+#!/bin/bash
+# script to set envars for syncing to S3
+
+DIRECTORY="$1"
+BUCKET="$2"
+PREFIX="$3"
+
+if [[ -z "$DIRECTORY" || -z $BUCKET ]] 
+then
+	echo -e "usage: $0 <path-to-directory> <bucket-name> <prefix>\n\n"
+	exit 1
+fi
+
+
+if [[ -h "uploads" ]]
+then
+	rm -f ./uploads
+fi
+
+ln -s -v "$DIRECTORY" ./uploads
+
+export S3SYNC_BUCKET=$BUCKET
+export S3SYNC_PREFIX=$PREFIX
+
+
+echo -e "About to sync contents of..."
+ls -l ./uploads
+echo -e "to S3 location: ${S3SYNC_BUCKET}/${S3SYNC_PREFIX}\n"
+
+grunt sync
+
+
