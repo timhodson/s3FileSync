@@ -29,9 +29,9 @@ shell prompt> ./run <path-to-files> <bucket-name> <prefix>
 
 Where:
 
-* **<path-to-files>** --  The path to the files that you want to upload
-* **<bucket-name>** -- The bucket to upload to.
-* **<prefix>** -- The 'folder' in the bucket to put the files in. (not strictly a folder but will be prepended to the file's key when uploaded and will act as if it were a folder. in most situations)
+* **`<path-to-files>`** --  The path to the files that you want to upload
+* **`<bucket-name>`** -- The bucket to upload to.
+* **`<prefix>`** -- The 'folder' in the bucket to put the files in. (not strictly a folder but will be prepended to the file's key when uploaded and will act as if it were a folder. in most situations)
 
 You may need to update Gruntfile.js with your specific region and desired concurrency.
 
