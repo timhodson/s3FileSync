@@ -23,10 +23,15 @@ npm install
 
 ## Running
 
-There is a script called ./run in the project root.
+There is a script which 
+
+* symlinks whichever directory you want to upload to an `uploads` directory in the project root.
+* sets appropriate ENV vars
+* launches grunt which then uses `aws_s3` to sync the files.
 
 ```bash
-shell prompt> ./run <path-to-files> <bucket-name> <prefix>
+cd ${installationDir}
+./s3FileSync <path-to-files> <bucket-name> <prefix>
 ```
 
 Where:
@@ -37,4 +42,6 @@ Where:
 
 You may need to update Gruntfile.js with your specific region and desired concurrency. I may make that configurable in a future iteration.
 
+## Limitations
+If you have very large amounts of files (over 8000) in a single directory the upload will work well, but subsequent sync's may struggle.
 

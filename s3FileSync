@@ -11,7 +11,7 @@ then
 	exit 1
 fi
 
-
+# setup our symlink for the upload directory
 if [[ -h "uploads" ]]
 then
 	rm -f ./uploads
@@ -19,6 +19,7 @@ fi
 
 ln -s -v "$DIRECTORY" ./uploads
 
+# export some env vars
 export S3SYNC_BUCKET=$BUCKET
 export S3SYNC_PREFIX=$PREFIX
 
@@ -27,6 +28,7 @@ echo -e "About to sync contents of..."
 ls -l ./uploads
 echo -e "to S3 location: ${S3SYNC_BUCKET}/${S3SYNC_PREFIX}\n"
 
+# run the sync
 grunt sync
 
 
